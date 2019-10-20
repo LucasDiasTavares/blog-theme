@@ -1,0 +1,131 @@
+@import url('../css/fonts.css');
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --font-Anton: 'Anton', cursive;
+    --font-Roboto: 'Roboto', cursive;
+    --light-gray: #727272;
+    --dark-red: #963d49;
+    --light-red: #e83633;
+    --light-yellow: #efea45;
+    --light-cyan: #6f968f;
+    --light-green: #b9d689;
+    --black: #0e0e0e;
+    --light-gradient: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* Globals */
+a {
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Navbar */
+.nav {
+    background: wheat;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-brand a {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--font-Anton);
+    font-size: 1.5rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0;
+    width: 85%;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+/* Classe for my script.js */
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.5rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--font-Roboto);
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--light-cyan);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: white;
+}
+
+.nav .social {
+    padding: 1.5rem 0;
+}
+
+.nav .social {
+    padding-top: auto;
+}
+
+/* max 750px */
+@media only screen and (max-width: 750px) {
+
+    .nav .nav-menu,
+    nav .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+
+}
