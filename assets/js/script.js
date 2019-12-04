@@ -12,4 +12,18 @@ $(document).ready(function () {
         nav: true,
         navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>']
     });
+
+    /* back to top btn */
+
+    const toTop = document.querySelector(".back-to-top-btn");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        }
+        else {
+            toTop.classList.remove("active");
+        }
+    })
+
 });
