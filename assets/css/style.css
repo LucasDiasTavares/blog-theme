@@ -353,7 +353,7 @@ main .site-content .post-content .post-title .post-btn {
 }
 
 .site-content .sidebar .popular-post h2 {
-    padding-top: 8rem;
+    padding-top: 4rem;
 }
 
 .site-content .sidebar .popular-post .post-info {
@@ -374,7 +374,7 @@ main .site-content .post-content .post-title .post-btn {
 /*SIDEBAR NEWSLETTER*/
 
 .site-content .sidebar .newsletter {
-    padding-top: 2rem;
+    padding-top: 4rem;
 }
 
 .site-content .sidebar .newsletter .form-element {
@@ -394,6 +394,23 @@ main .site-content .post-content .post-title .post-btn {
     padding: 0.8rem 32%;
     margin: 1rem 0;
     background: var(--light-gradient);
+    font-family: var(--font-Roboto);
+    font-weight: bold;
+}
+
+/*SIDEBAR POPULAR TAGS*/
+.site-content .sidebar .popular-tags {
+    padding: 4rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag {
+    background: var(--light-gradient);
+    padding: 0.4rem 1rem;
+    border-radius: 3rem;
+    margin: 0.4rem 0.6rem;
+    font-family: var(--font-Roboto);
+    font-weight: bold;
+    color: var(--light-gray);
 }
 
 /* End of Site Content */
