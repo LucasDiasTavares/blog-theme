@@ -1,3 +1,23 @@
+const responsive = {
+    // breakpoint from 0 up
+    0: {
+        items: 1,
+        nav: false
+    },
+    // breakpoint from 560 up
+    560: {
+        items: 2
+    },
+    // breakpoint from 960 up
+    960: {
+        items: 3
+    },
+    // breakpoint from 1200 up
+    1200: {
+        items: 4
+    }
+}
+
 $(document).ready(function () {
     $nav = $('.nav');
 
@@ -10,7 +30,8 @@ $(document).ready(function () {
         autoplay: false,
         autoplayTimeout: 3000,
         nav: true,
-        navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>']
+        navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>'],
+        responsive: responsive
     });
 
     /* back to top btn */

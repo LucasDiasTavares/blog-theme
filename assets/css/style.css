@@ -227,10 +227,6 @@ main .blog-content .btn-blog {
     margin: 0.5rem;
 }
 
-main .blog-content span {
-    display: block;
-}
-
 section .container .owl-nav {
     position: absolute;
     top: 0%;
@@ -513,8 +509,30 @@ footer.footer .copyrights h4 a {
 
 /* End of Footer */
 
-/* max 750px */
-@media only screen and (max-width: 750px) {
+/*-- HomePage Responsive --*/
+/* max 1100px large screens */
+@media only screen and (max-width: 1100px) {
+
+    /* Change the behavior of post info (date/comments) */
+    .site-content .post-content>.post-image .post-info {
+        left: 2rem !important;
+        bottom: 1rem !important;
+        border-radius: 0% !important;
+    }
+
+    /* Remove post info (date/comments)*/
+    .site-content .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* max 768px medium smartphones/tablets */
+@media only screen and (max-width: 768px) {
 
     .nav .nav-menu,
     nav .nav-items {
@@ -525,4 +543,64 @@ footer.footer .copyrights h4 a {
         display: initial;
     }
 
+    main .site-content {
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer.footer .newsletter .form-element input {
+        width: 100% !important;
+    }
+
+}
+
+/* max 576px small/medium smartphones */
+@media only screen and (max-width: 576px) {
+
+    main .blog {
+        height: 100vh !important;
+    }
+
+    .site-content .post-content>.post-image .post-info {
+        display: none;
+    }
+
+}
+
+/* max 576px extra-smallsmartphones */
+@media only screen and (max-width: 320px) {
+
+    .site-content .post-content>.post-image .post-info {
+        display: none;
+    }
+
+    main .site-content .post-title p {
+        display: none;
+    }
+
+    main .site-content .post-title a {
+        font-size: 1rem;
+    }
+
+    main .site-content .post-content .post-title .post-btn {
+        margin-top: 1rem;
+    }
+
+    /* Navbar */
+    nav .toggle-collapse {
+        width: 80%;
+    }
+
+    .nav .toggle-collapse .toggle-icons {
+        padding: 1.5rem 0 !important;
+        font-size: 1.5rem;
+    }
+
+    /* Newsletter */
+    .site-content .sidebar .newsletter .form-btn {
+        padding: 1rem 27% !important;
+    }
 }
